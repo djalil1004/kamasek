@@ -1,0 +1,98 @@
+*{
+	font-family: "arsenal-regular";
+}
+:root{
+	--color1: 141414;
+	--calc2:  calc(1vw + 1vh);
+	--cubic-bezier3: 1.25s cubic-bezier(.2,.5,0,1);
+	--cubic-bezier4: 2s cubic-bezier(.05,.5,0,1);
+}
+
+@font-face{
+	font-family: "arsenal-regular";
+	src: url("../fonts/arsenal-regular.woff2");
+}
+
+html, body{
+	font-family: "arsenal-regular:";                                                                                                                                                                                                                                                                                      
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.magic-list{
+
+}
+
+.magic-list__item{
+
+}
+
+.magic-list__item:first-child{
+
+}
+
+.magic-list__header{
+	transition: transform var(--transition);
+	font-size: 50px;
+	padding: 50px;
+}
+
+.magic-list__item::before{
+	transition: transform var(--transition);
+}
+
+.magic-list__item:hover .magic-list__header,
+.magic-list__item:hover::before{
+
+}
+
+.cursor{
+	transition: transform var(--transitioncursor), height 1s ease;
+	display: none;
+	transition: transform var(--transition-cursor);
+	position: absolute;
+	cursor: none;
+	--cursor-transform: translate3d(calc(var(--move-x) / -5), 
+	calc(var(--move-y) / -5),0);
+	width: calc(var(--width) * 2);
+	height: calc(var(--height) * 2);
+	top: calc(var(--height) * -.4);
+	left: calc(var(--width) * -.25);
+	background-size: contain;
+	background-position: center;
+	transition: transform var(--transition-cursor);
+	transform: var(--cursor-transform)scale(1.5);
+}
+
+.magic-list__item:hover .cursor{
+	display: block;
+}
+
+.cursor__image{
+	transition: transform var(--transition-cursor);
+	--cursor-transform: translate3d(calc(var(--move-x) /1), 
+	calc(var(--move-y) / 50),0);
+	position: relative;
+	width: calc(var(--width) * 2);
+	height: calc(var(--height) * 2);
+	top: calc(var(--height) * -.1);
+	left: calc(var(--width) * -.1);
+	background-size: cover;
+	background-position: center;
+	transform: var(--cursor-transform)scale(1.5);
+	transition: transform var(--transition-cursor);
+	cursor: none;
+	z-index: 1;
+}
+
+.magic-list__item:hover .cursor__image{
+
+}
+
+#sup{
+	font-size: 20px;
+	color: gray;
+}
